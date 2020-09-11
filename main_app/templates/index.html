@@ -11,5 +11,11 @@
 </head>
 <body>
     <h1>Tedious Tasks</h1>
+    {% if task_list|length == 0 %}
+        <h3>No Tasks Exist</h3>
+        <hr>
+    {% else %}
+        <p>placeholder</p>
+    {% endif %}
 </body>
 </html>
