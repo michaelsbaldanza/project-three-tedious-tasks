@@ -14,8 +14,26 @@
     {% if task_list|length == 0 %}
         <h3>No Tasks Exist</h3>
         <hr>
+        <h4>Add Task</h4>
+        <form class="pure-form" method="post">
+            {% csrf_token %}
+            {{ task_form.as_p }}
+            <input type="submit" class="pure-btn" value="Add Task">
+        </form>
     {% else %}
-        <p>placeholder</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Time</th>
+                    <th>Person</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
     {% endif %}
 </body>
 </html>
