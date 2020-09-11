@@ -1,1 +1,3 @@
 {% url 'add_task' task.id %}
+
+{% url 'add_task' %}
