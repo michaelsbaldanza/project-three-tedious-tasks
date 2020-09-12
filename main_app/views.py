@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.generic.edit import DeleteView
 from .models import Task
 from .forms import TaskForm
 
@@ -15,3 +16,7 @@ def add_task(request):
     new_task = form.save(commit=False)
     new_task.save()
   return redirect('index')
+
+class TaskDelete(DeleteView):
+    model = Task
+    success_url = '/'
